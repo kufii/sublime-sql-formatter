@@ -1,0 +1,73 @@
+[{
+	"id": "edit",
+	"children": [
+		{
+			"id": "sql_formatter",
+			"caption": "Format SQL",
+			"command": "sql_formatter"
+		},
+		{
+			"caption": "Format SQL With Dialect",
+			"children": [
+				{
+					"caption": "Standard SQL",
+					"command": "sql_formatter",
+					"args": {
+						"dialect": "sql"
+					}
+				},
+				{
+					"caption": "Couchbase N1QL",
+					"command": "sql_formatter",
+					"args": {
+						"dialect": "n1ql"
+					}
+				},
+				{
+					"caption": "IBM DB2",
+					"command": "sql_formatter",
+					"args": {
+						"dialect": "db2"
+					}
+				},
+				{
+					"caption": "Oracle PL/SQL",
+					"command": "sql_formatter",
+					"args": {
+						"dialect": "pl/sql"
+					}
+				}
+			]
+		}
+	]
+}, {
+	"id": "preferences",
+	"children": [
+		{
+			"id": "package-settings",
+			"children": [
+				{
+					"caption": "sql-formatter",
+					"children": [
+						 {
+							"caption": "Settings",
+							"command": "edit_settings",
+							"args": {
+								"base_file": "${packages}/sql-formatter/sql-formatter.sublime-settings",
+								"default": "// Settings in here override those in \"sql-formatter/sql-formatter.sublime-settings\",\n\n{\n\t$0\n}\n"
+							}
+						},
+						{
+							"caption": "Key Bindings",
+							"command": "edit_settings",
+							"args": {
+								"base_file": "${packages}/sql-formatter/Default ($platform).sublime-keymap",
+								"default": "[\n\t$0\n]\n"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}]

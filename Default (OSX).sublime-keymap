@@ -1,0 +1,4 @@
+[{
+	"keys": ["super+k", "super+q"],
+	"command": "sql_formatter"
+}]

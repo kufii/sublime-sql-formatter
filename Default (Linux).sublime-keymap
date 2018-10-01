@@ -1,0 +1,4 @@
+[{
+	"keys": ["ctrl+k", "ctrl+q"],
+	"command": "sql_formatter"
+}]

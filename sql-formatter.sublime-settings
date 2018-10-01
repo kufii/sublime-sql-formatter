@@ -1,0 +1,22 @@
+{
+	// The paths to look for executables
+	"paths": {
+		"linux": [],
+		"osx": [],
+		"windows": []
+	},
+
+	// The default dialect to use for formatting
+	// Options:
+	// "sql" - Standard SQL
+	// "n1ql" - Couchbase N1QL
+	// "db2" - IBM DB2
+	// "pl/sql" - Oracle PL/SQL
+	"default_dialect": "sql",
+
+	// The number of spaces to indent with
+	"indent_size": 2,
+
+	// Indent with tabs instead of spaces
+	"use_tabs": false
+}
