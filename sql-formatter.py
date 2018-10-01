@@ -25,11 +25,10 @@ class SqlFormatterDialectSelect(sublime_plugin.TextCommand):
     }
 
     def run(self, edit):
-        self.view.window().show_quick_panel(list(self.dialects.values()), self.run_command, 0)
-
-    def run_command(self, index):
-        if index >= 0:
-            dialect = list(self.dialects.keys())[index]
-            self.view.run_command('sql_formatter', {
-                'dialect': dialect
-            })
+        def run_command(index):
+            if index >= 0:
+                dialect = list(self.dialects.keys())[index]
+                self.view.run_command('sql_formatter', {
+                    'dialect': dialect
+                })
+        self.view.window().show_quick_panel(list(self.dialects.values()), run_command, 0)
