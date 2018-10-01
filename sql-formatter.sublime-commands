@@ -4,31 +4,7 @@
 		"command": "sql_formatter"
 	},
 	{
-		"caption": "Format SQL With Dialect - Standard SQL",
-		"command": "sql_formatter",
-		"args": {
-			"dialect": "sql"
-		}
-	},
-	{
-		"caption": "Format SQL With Dialect - Couchbase N1QL",
-		"command": "sql_formatter",
-		"args": {
-			"dialect": "n1ql"
-		}
-	},
-	{
-		"caption": "Format SQL With Dialect - IBM DB2",
-		"command": "sql_formatter",
-		"args": {
-			"dialect": "db2"
-		}
-	},
-	{
-		"caption": "Format SQL With Dialect - Oracle PL/SQL",
-		"command": "sql_formatter",
-		"args": {
-			"dialect": "pl/sql"
-		}
+		"caption": "Format SQL With Dialect",
+		"command": "sql_formatter_dialect_select"
 	}
 ]

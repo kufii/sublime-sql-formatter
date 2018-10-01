@@ -14,3 +14,22 @@ class SqlFormatterCommand(sublime_plugin.TextCommand):
             return
 
         self.view.replace(edit, full_file_region, formatted_text)
+
+
+class SqlFormatterDialectSelect(sublime_plugin.TextCommand):
+    dialects = {
+        'sql': 'Standard SQL',
+        'n1ql': 'Couchbase N1QL',
+        'db2': 'IBM DB2',
+        'pl/sql': 'Oracle PL/SQL'
+    }
+
+    def run(self, edit):
+        self.view.window().show_quick_panel(list(self.dialects.values()), self.run_command, 0)
+
+    def run_command(self, index):
+        if index >= 0:
+            dialect = list(self.dialects.keys())[index]
+            self.view.run_command('sql_formatter', {
+                'dialect': dialect
+            })

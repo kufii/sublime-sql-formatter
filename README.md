@@ -25,10 +25,7 @@ To install via Package Control, do the following:
 ### Command Palette
 
 * `Format SQL`: Runs the formatter with the default dialect defined in your settings.
-* `Format SQL With Dialect - Standard SQL`: Runs the formatter with the `sql` dialect setting.
-* `Format SQL With Dialect - Couchbase N1QL`: Runs the formatter with the `n1ql` dialect setting.
-* `Format SQL With Dialect - IBM DB2`: Runs the formatter with the `db2` dialect setting.
-* `Format SQL With Dialect - Oracle PL/SQL`: Runs the formatter with the `pl/sql` dialect setting.
+* `Format SQL With Dialect`: Runs the formatter with a dialect of your choosing.
 
 ### Default Hotkeys
 
