@@ -12,7 +12,7 @@ This plugin requires node.js, and also requires cli-sql-formatter to be globally
 
 ### Plugin Installation
 
-In the future, once approved, this plugin will be installable via [Package Control](https://packagecontrol.io/installation)
+This plugin is installable via [Package Control](https://packagecontrol.io/installation)
 
 To install via Package Control, do the following:
 
