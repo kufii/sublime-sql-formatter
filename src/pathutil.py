@@ -4,6 +4,8 @@ import sublime
 
 
 def expand_path(path):
+    variables = sublime.active_window().extract_variables()
+    path = sublime.expand_variables(path, variables)
     return os.path.expanduser(os.path.expandvars(path))
 
 
