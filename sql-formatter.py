@@ -6,14 +6,23 @@ from .src import formatter
 
 class SqlFormatterCommand(sublime_plugin.TextCommand):
     def run(self, edit, **kwargs):  # pylint: disable=arguments-differ
-        full_file_region = sublime.Region(0, self.view.size())
-        file_text = self.view.substr(full_file_region)
-        formatted_text = formatter.format_sql(file_text, kwargs['dialect'] if kwargs else None)
+        dialect = kwargs['dialect'] if kwargs else None
 
-        if not formatted_text or formatted_text == file_text:
+        for region in self.view.sel():
+            if region.empty():
+                selection = sublime.Region(0, self.view.size())
+                self.replace_region_with_formatted_sql(edit, selection, dialect)
+            else:
+                self.replace_region_with_formatted_sql(edit, region, dialect)
+        
+    def replace_region_with_formatted_sql(self, edit, region, dialect):
+        selected_text = self.view.substr(region)
+        formatted_text = formatter.format_sql(selected_text, dialect)
+
+        if not formatted_text or formatted_text == selected_text:
             return
-
-        self.view.replace(edit, full_file_region, formatted_text)
+        
+        self.view.replace(edit, region, formatted_text)
 
 
 class SqlFormatterDialectSelect(sublime_plugin.TextCommand):
