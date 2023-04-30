@@ -18,5 +18,8 @@
 	"indent_size": 2,
 
 	// Indent with tabs instead of spaces
-	"use_tabs": false
+	"use_tabs": false,
+
+    // set syntax
+    "set_syntax_on_format": true
 }
